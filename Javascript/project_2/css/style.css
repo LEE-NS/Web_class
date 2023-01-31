@@ -1,0 +1,44 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    background-image: url(../wallpaper.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container {
+    background-color: #fff;
+    opacity: 0.9;
+    min-height: 100vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.task_area {
+    border: 1px solid #cfcbb5;
+}
+.task_area .task_tabs {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #cfcbb5;
+}
+.task_tabs div {
+    padding: 1em;
+    cursor: pointer;
+}
+.task_tabs #underline {
+    height: 4px;
+    background-color: #54583b;
+    position: absolute;
+    width: 80px;
+    padding: 0;
+    left: 0;
+    top: 52px;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.task_done {
+    text-decoration: line-through;
+}

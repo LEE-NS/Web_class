@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 순서명령</title>
+    <link rel="stylesheet" href="./css/style05.css">
+</head>
+<body>
+    <h1>순서명령</h1>
+    <textarea cols="130" rows="15">
+
+        자바스크립트의 첫번째 자료의 순서값은 항상 0번.
+        (순서값은 index 입니다.)
+
+        $('선택자').index()     :   선택자의 순서값을 저장하는 명령
+        $('선택자').eq(index값)     :   index값으로 요소를 선택
+
+        ex)
+        $('.gnb li')    :   .gnb의 li가 모두 선택됨
+        $('.gnb li').eq(3)    :   index값이 3인 li만 선택됨
+
+    </textarea>
+    <br><hr><br>
+    <div class="box">
+        <div class="btn">
+            <p class="on">탭 1</p>
+            <p>탭 2</p>
+            <p>탭 3</p>
+        </div>
+        <div class="pannel">
+            <div class="inner view">탭 1의 내용</div>
+            <div class="inner">탭 2의 내용</div>
+            <div class="inner">탭 3의 내용</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script src="./js/s05.js"></script>
+</body>
+</html>

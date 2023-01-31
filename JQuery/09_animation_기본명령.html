@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 animation 기본 명령</title>
+    <link rel="stylesheet" href="./css/style09.css">
+</head>
+<body>
+    <h1>animation 기본 명령</h1>
+    <textarea cols="130" rows="22">
+
+        $('선택자').애니메이션 명령(시간의 양);
+
+        시간의 양은 1초를 1000으로 표기한다.
+        시간의 양이 적으면 빨라지고, 많으면 느려진다.
+        시간의 양이 움직이는 속도를 나타낸다.
+
+        show(), hide(), toggle()
+            너비, 높이, 투명도를 변경해서 움직임을 만듦
+
+        slideDown(), slideUp(), slideToggle()
+            높이값을 변경해서 움직임을 만듦
+
+        fadeIn(), fadeOut(), fadeToggle()
+            투명도를 변경해서 움직임을 만듦
+
+        9가지 기본 명령은 애니메이션이 완료 된 후 태그의 display 상태값을 block 또는 none으로 만든다
+        
+        애니메이션 명령 사용 시 시간 값을 생략할 수 있다.
+        JQuery 기본 문서에 애니메이션 명령에 대한 시간값이 600으로 입력되어 있기 때문에 생략이 가능함
+        단 show(), slide(), toggle()의 경우 시간값을 생략해서 사용하면 속도값이 0으로 인식된다.(바로 전환됨)
+    </textarea>
+    <br><hr><br>
+    <div class="box1">
+        <div class="btn">
+            <button class="bt1">show</button>
+            <button class="bt2">hide</button>
+            <button class="bt3">toggle</button>
+            <button class="bt4">slideDown</button>
+            <button class="bt5">slideUp</button>
+            <button class="bt6">slideToggle</button>
+            <button class="bt7">fadeIn</button>
+            <button class="bt8">fadeOut</button>
+            <button class="bt9">fadeToggle</button>
+        </div>
+        <div class="pan"></div>
+    </div>
+    <br><hr><br>
+    <textarea cols="130" rows="10">
+
+        $('선택자').애니메이션 명령(시간, easing);
+
+        easing : 가속 방식; 처음에는 빠르게 뒤에는 느리게, 처음에는 느리게 뒤에는 빠르게 등 가속되는 방식을 입력하는 부분
+
+        JQuery에서는 기본적으로 두 가지 방식이 있음
+            swing : 점점 빨라짐(default)
+            linear : 일정 속도로 움직임
+    </textarea>
+    <br><hr><br>
+    <div class="box2">
+        <button>CLICK</button>
+        <div class="b2">
+            <p class="b21">swing</p>
+            <p class="b22">linear</p>
+        </div>
+    </div>
+    <br><br><hr><br><br>
+    <textarea cols="130" rows="10">
+
+        $('선택자').애니메이션 명령(시간의 양, easing, 콜백함수);
+
+        콜백 함수 : 애니메이션이 완료된 후 실행할 명령을 묶어둔 함수
+    </textarea>
+    <br><hr><br>
+    <div class="box3">
+        <button>CLICK</button>
+        <div class="b3">
+            <p class="p31"></p>
+            <p class="p32"></p>
+        </div>
+    </div>
+    <br><br><hr><br><br>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script src="./js/s09.js"></script>
+</body>
+</html>

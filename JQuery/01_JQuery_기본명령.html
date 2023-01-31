@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 JQuery의 기본명령</title>
+</head>
+<body>
+    <h1>JQuery의 기본명령</h1>
+    <textarea cols="150" rows="15">
+
+        - 자바스크립트의 라이브러리 언어 중 하나
+        - 자바스크립트의 을 보다 간결하게 사용할 수 있도록 해준다.
+        - JQuery 기본 문서를 반드시 HTML 문서에 연결해서 사용해야 한다.
+        - 내가 작성할 명령들보다 앞에 작성되어야 한다.
+
+        JQuery는 버전은 1, 2, 3 총 세 가지가 있다.
+            ● 버전 1과 2는 완전 동일한 문서이나, 버전 2는 HTML 전용으로 만들어졌다. (현재 큰 의미는 없음)
+            ● 버전 3은 CSS3의 애니메이션 명령, 색상 명령 등이 추가되었고, 버전 1의 일부 명령이 삭제 또는 개정됨.       
+    </textarea>
+
+    <h1>JQuery 선택자</h1>
+    <textarea cols="150" rows="15">
+
+        - 명령이 적용 될 대상
+            클릭해야 할 버튼, 팝업창, 메뉴목록, 슬라이드 등
+
+        - 선택자의 형태
+            $('선택 대상')
+            
+        - CSS에서 사용했던 모든 형태의 선택자를 JQuery에서 그대로 사용할 수 있다.
+            $('div'), $('#wrap'), $('.gnb'), $('.list li')     
+    </textarea>
+
+    <h1>JQuery 명령</h1>
+    <textarea cols="150" rows="15">
+
+        명령의 가장 기본적인 형태
+            $('선택 대상').명령어();
+
+        하나의 대상이 여러개의 명령이 순차적으로 실행될 때 명령을 사슬처럼 엮어서 작성할 수 있다.
+            $('선택 대상').명령어().명령어().명령어().명령어().명령어();
+            
+        명령어에 따라서는 뒤에 오는 괄호(매개변수값)가 비어지는 경우도 있고, 채워지는 경우도 있다.
+        매개변수가 설정되어있는 명령의 경우 파라미터를 사용할 때와 사용하지 않을 때 실행결과가 달라질 수 있다.
+        어떤 명령의 경우에는 여러개의 매개변수를 가질 수 있다.    
+    </textarea>   
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script> 
+</body>
+</html>

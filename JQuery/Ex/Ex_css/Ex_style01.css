@@ -1,0 +1,35 @@
+@charset "UTF-8";
+ul {
+    list-style: none;
+    padding: 0;
+}
+h1 {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.box {
+    width: 300px;
+    margin: 0 auto;
+}
+.box .photo li {
+    display: none;
+}
+.box .photo li:first-child {
+    display: block;
+}
+.box .btn ul {
+    display: flex;
+    justify-content: center;
+}
+.box .btn ul li {
+    width: 10px;
+    height: 10px;
+    margin: 10px 10px;
+    border-radius: 50%;
+    background-color: #cdcdcd;
+    text-indent: -99999px;
+}
+.box .btn .on {
+    background-color: red;
+}

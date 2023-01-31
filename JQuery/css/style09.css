@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.box1 {
+    display: flex;
+    height: 300px;
+    margin-top: 50px;
+}
+.box1 .btn {
+    width: 300px;
+
+}
+.box1 .btn button {
+    width: 80px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.box1 .pan {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    background-color: limegreen;
+}
+.box2, .box3 {
+    margin: 30px 0;
+}
+.box2 .b2, .box3 .b3 {
+    display: flex;
+    height: 500px;
+}
+.box2 .b2 p, .box3 .b3 p {
+    width: 200px;
+    height: 500px;
+    margin-right: 30px;
+    background-color: lightcoral;
+}
+.box3 .b3 p {
+    display: none;
+}

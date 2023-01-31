@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 scroll event(스크롤 이벤트)</title>
+    <link rel="stylesheet" href="./css/style07.css">
+</head>
+<body>
+    <h1>scroll event(스크롤 이벤트)</h1>
+    <div class="box1">
+        <p>
+            <img src="./img/food02.jpg" alt="">
+        </p>
+    </div>
+    <textarea cols="130" rows="10">
+        스크롤 이벤트는 스크롤의 현재 위치값을 비교해서 동작을 지정하는 경우가 많다.
+
+        스크롤의 이동거리 == 컨텐츠의 이동거리
+        스크롤이 오른쪽 방향으로 10px 이동하면 컨텐츠도 왼쪽 방향으로 10px 이동하는 것이 연속 발생해서 움직임으로 보여지는 것
+
+        스크롤의 현재 위치를 지정하는 명령 : scrollTop(), scrollLeft()
+    </textarea>
+    <br><hr><br>
+    <div class="box2">
+        <div class="inner">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <br>
+    <div class="box3">
+        <div class="inner">
+            <div class="b31">1</div>
+            <div class="b32">2</div>
+            <div class="b33">
+                <span class="b33_icon">
+                    <img src="./img/cosmetic01.jpg" alt="">
+                </span>
+            </div>
+            <div class="b34"></div>
+            <div class="b35"></div>
+        </div>
+    </div>
+    <br>
+    <textarea cols="130" rows="20">
+
+        실제 사이트 작업시에는 스크롤 이벤트가 발생될 시점의 숫자값을 정확하게 수동으로 입력할 수 없다.
+        컨텐츠의 유무에 따라 세로의 거리가 변할 수 있기 때문
+        혹은 PC, 태블릿, 모바일에 따라 환경이 변하기 때문에 정확한 숫자값을 알 수 없다.
+
+        그래서 이벤트가 발생 될 스크롤의 위치값을 얻기 위해 특정 태그의 절대 위치값을 활용한다.
+            - 절대 위치값이란?
+                문서가 시작되는 위치부터 특정 태그까지의 거리를 가리킨다
+                (스크롤의 이동거리 = 컨텐츠의 이동거리)
+
+        절대 위치값을 지정하는 명령 : offset()
+        
+        offset() 명령은 가로와 세로의 위치값을 한꺼번에 저장한다.
+        세로 위치값만 사용할 때 : offset().top;
+        가로 위치값만 사용할 때 : offset().left;
+    </textarea>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script src="./js/s07.js"></script>
+</body>
+</html>

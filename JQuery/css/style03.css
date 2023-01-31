@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.box02 {
+    display: flex;
+}
+.box02 p {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    background-color: lightpink;
+}
+.box02 .p21 {
+    display: none;
+}

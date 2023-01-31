@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.box1 p {
+    width: 300px;
+    height: 300px;
+    background-color: antiquewhite;
+}

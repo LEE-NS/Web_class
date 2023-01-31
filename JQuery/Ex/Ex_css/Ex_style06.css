@@ -1,0 +1,89 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 100px auto;
+}
+.btns > div {
+    cursor: pointer;
+    text-align: center;
+}
+
+.btns .line span,
+.btns .line::before,
+.btns .line::after {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #222;
+}
+
+.btns .line span {
+    margin: 5px 0;
+}
+
+.btns .line::before,
+.btns .line::after {
+    content: "";
+}
+
+.sideT,
+.sideB,
+.sideL,
+.sideR {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.sideT {
+    top: -100%;
+    left: 0;
+    background-color: cornsilk;
+}
+.sideB {
+    bottom: -100%;
+    left: 0;
+    background-color: steelblue;
+}
+.sideL {
+    left: -100%;
+    top: 0;
+    background-color: tomato;
+}
+.sideR {
+    top: 0;
+    right: -100%;
+    background-color: darkseagreen;
+}
+
+.close {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+    background-color: #222;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.close::before,
+.close::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 4px;
+    width: 32px;
+    height: 4px;
+    background-color: #eee;
+}
+.close::before {
+    transform: rotate(45deg);
+}
+.close::after {
+    transform: rotate(-45deg);
+}

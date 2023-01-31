@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.box1 {
+    height: 300px;
+    padding: 30px;
+    background-color: antiquewhite;
+}
+.box1 p {
+    height: 300px;
+    margin: 0;
+    background-color: aquamarine;
+}
+
+.box2 {
+    height: 300px;
+    padding: 30px;
+    background-color: brown;
+}
+.box2 p {
+    height: 300px;
+    margin: 0;
+    background-color: burlywood;
+}

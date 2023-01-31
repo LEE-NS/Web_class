@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.box01 {
+    display: flex;
+}
+.box01 .p12 {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    background-color: tomato;
+}
+.box01 .p11 {
+    display: none;
+}
+
+.box01 .on {
+    border: 5px solid #000;
+}
+
+.box02 {
+    display: flex;
+}
+
+.box02 .on {
+    border: 5px solid #000;
+}
+
+.box02 p{
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+    background-color: aqua;
+}

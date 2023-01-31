@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 이벤트</title>
+    <link rel="stylesheet" href="./css/style06.css">
+</head>
+<body>
+    <h1>이벤트</h1>
+    <textarea cols="130" rows="15">
+
+        - 명령이 실행 될 타이밍
+            문서를 열 때, 클릭할 때, 마우스가 호버 될 때, 스크롤이 발생할 때 등
+
+        - 이벤트 명령의 형태
+            $('선택자').이벤트명령(함수로 이벤트로 인해 일어날 일들을 표현한다);
+            
+            $('선택자').이벤트명령(function() {
+                이벤트로 인해 일어날 일들
+            });
+
+        - 주로 사용되는 이벤트 명령어
+            click, mouseover, mouseout, mouseenter, mouseleave, scroll, resize    
+    </textarea>
+    <br><hr><br>
+    <h1>클릭 이벤트</h1>
+    <div class="box1">
+        <button class="bt11">CHANGE</button>
+        <button class="bt12">RESET</button>
+        <p></p>
+    </div>
+    <br><hr><br>
+    <div class="box2">
+        <ul>
+            <li class="active">목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+    </div>
+    <br><hr><br>
+    <div class="box3">
+        <a href="">click</a>
+        <p></p>
+    </div>
+    <br><br><hr><br><br>
+    <h1>호버 이벤트</h1>
+    <div class="box4">
+        <p class="count01">0</p>
+        <div class="inner">
+            <p class="count01">0</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><hr><br><br>
+    <div class="box5">
+        <p class="count02">0</p>
+        <div class="inner">
+            <p class="count02">0</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+    <script src="./js/s06.js"></script>
+</body>
+</html>

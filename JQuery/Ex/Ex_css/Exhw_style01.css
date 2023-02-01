@@ -1,0 +1,46 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+#wrap {
+    width: 600px;
+    margin: 100px auto;
+}
+.photo {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+.photoBox {
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+.photoBox:first-child {
+    left: 0;
+}
+.pager {
+    position: relative;
+    margin-top: 30px;
+}
+.pager ul {
+    display: flex;
+    justify-content: center;
+}
+.pager ul li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #ddd;
+    text-indent: -99999px;
+}
+.pager .active {
+    background-color: darksalmon;
+}

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1 {
+    font-size: 22px;
+    margin: 20px 0;
+}
+.mainSlide {
+    position: relative;
+    min-width: 1240px;
+    margin-bottom: 100px;
+}
+.msImgBox {
+    overflow: hidden;
+}
+.msImgBox a {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+}
+.msImgBox a .photo {
+    margin-left: -360px;
+}
+.mainSlide .msPrev,
+.mainSlide .msNext {
+    position: absolute;
+    top: 170px;
+    width: 79px;
+    height: 79px;
+    border: 1px solid #888;
+    border-radius: 50%;
+    text-indent: -99999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.mainSlide .msPrev {
+    left: 50%;
+    margin-left: -640px;
+    background-image: url(../Ex_img/btn_prev.png);
+}
+.mainSlide .msNext {
+    right: 50%;
+    margin-right: -640px;
+    background-image: url(../Ex_img/btn_next.png);
+}
+.msBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.msPager ul {
+    display: flex !important;
+}
+/* 우선순위 무시하고 !important 키워드를 붙인 값을 최종결과로 브라우저에 반영함. */
+.msPager li {
+    padding: 4px 6px;
+}
+.msPager li button {
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+.msPager .slick-active button {
+    background-color: red;
+}
+.msPause,
+.msPlay {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+.msPause {
+    background-image: url(../Ex_img/btn_pause.png);
+}
+.msPlay {
+    display: none;
+    background-image: url(../Ex_img/btn_play.png);
+}

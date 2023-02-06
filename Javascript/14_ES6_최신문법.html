@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 ES6 최신문법</title>
+</head>
+<body>
+    <h1>Javascript ES6 최신문법</h1>
+    <textarea cols="200" rows="250">
+
+        1. 모던형 자바스크립트
+        2. ES6? - ECMAScript의 약자. Javascript의 표준, 규격을 나타내는 용어. 모델명.
+        3. 모든 언어는 업데이트를 한다. 처음부터 완벽하게 나오지 않기 때문이다. 그 중에서도 가장 최신 / 이슈가 되었던 업데이트가 ES6이다. 이 업데이트가 되면서 생긴 새로운 기능들은 아래와 같다
+
+            - 템플릿 리터럴
+                1. 백틱(`)으로 사용
+                2. ${}, 중괄호 앞에 달러 사인을 통해 자바스크립트 표현식의 사용이 가능
+
+                //ES5
+                var str1 = ', ';
+                var str2 = 'World!';
+                var str3 = 'Hello' + str1 + str2;
+                
+                //ES6
+                let str1 = ', ';
+                let str2 = 'World!';
+                let str3 = `Hello ${str1} ${str2}`;
+
+            - 객체 리터럴  
+                1. 이전 문법보다 훨씬 간결해지 코드로 객체를 선언할 수 있다.
+                2. 메소드에 더이상 클론(:)이나 function을 붙이지 않아도 된다.
+                3. 함수명이 겹치는 경우에는 한 번만 쓸 수 있다.
+                4. 객체의 프로퍼티를 동적으로 생성하려면 객체 리터를 바깥에서 선언했어야 했는데, ES6 부터는 객체 안에서 바로 속성으로 사용이 가능하다.
+                
+                const myFn = function() {
+                    console.log('myFn');
+                };
+                const text = 'TEXT';
+                const obj = {
+                    inside() {
+                        console.log('객체 안에서 바로 함수를 선언한다');
+                    },
+                    myFn,
+                    [text + 1] : '웹컴바인'
+                };
+                obj.inside();   //출력값 : 객체 안에 바로 함수를 선언한다.
+                obj.myFn();   //출력값 : myFn
+                console.log(obj.TEXT1);   //출력값 : 웹컴바인
+                
+            - 화살표 함수(Arrow function)
+                1. 함수 표현식을 화살표 함수로 표현할 수 있다.
+                2. 화살표 함수가 추가되어 함수를 간결하게 나타낼 수 있게 되어 가독성 및 유지 보수성이 올라갔다.
+                3. 만약 함수의 본문에 return만 있는 경우 화살표 함수는 return과 {}를 생략할 수 있다. 단 둘을 같이 생략해야 한다.
+                4. return문에서 소괄호는 사용 가능하다
+                
+                //ES5
+                function plusFn(a,b) {
+                    return a + b;
+                };
+
+                //ES6 
+                //함수 표현식 : 화살표 함수
+                const plusFn = {a,b} => {
+                    return a + b;
+                };
+                //함수 표현식 : 화살표 함수(생략형)
+                const plusFn = (a,b) => a + b;
+    </textarea>
+    <script>
+        let name = 'JiHun';
+        let age = 20;
+
+        let person {
+            '이름': name,
+            '나이': age
+        };
+        //let person1 = {name, age}
+        //console.log(person)
+        //console.log(person1)
+
+        //let bts = {
+        //    name: '방탄소년단',
+        //    num: 7
+        //}
+        //let name1 = bts.name
+        //let num = bts.num
+        //console.log(name1, num);
+
+        //let {name, num} = bts
+        //console.log(name, num);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+#wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1240px;
+    min-height: 500px;
+    background-color: antiquewhite;
+}
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: cornflowerblue;
+    text-align: center;
+    line-height: 100px;
+}
+#container {
+    box-sizing: border-box;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: tomato;
+}
+.cont_list {
+    height: 100%;
+    overflow: hidden;
+    background-color: yellow;
+}
+.cont_pager {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.cont_pager span {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 25px 0;
+    cursor: pointer;
+}
+.cont_pager span::before {
+    position: absolute;
+    display: none;
+    right: 24px;
+    top: -5px;
+    width: 150px;
+    text-align: right;
+}
+.cont_pager span:nth-child(1)::before {
+    content: "섹션 1 제목";
+}
+.cont_pager span:nth-child(2)::before {
+    content: "섹션 2 제목";
+}
+.cont_pager span:nth-child(3)::before {
+    content: "섹션 3 제목";
+}
+.cont_pager .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.cont_pager .swiper-pagination-bullet-active::before {
+    display: block;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: salmon;
+}

@@ -67,6 +67,44 @@
                 };
                 //함수 표현식 : 화살표 함수(생략형)
                 const plusFn = (a,b) => a + b;
+        
+                - 구조 분해 할당
+                1. 펼친다는 뜻으로 객체와 배열에서 사용되어진다.
+                2. 값을 해체한 후 개별 변수에 할당하는 과정을 말한다.
+                
+                // 배열에서 Spread 사용
+                const arr = [1,2,3];
+                const [one, two, three] = arr;
+
+                one // 1
+                two // 2
+                three // 3
+
+                // 객체에서 Spread 사용
+                const = obj {
+                    firstName: '컴바인',
+                    lastName: '웹'
+                };
+                const {firstName, lastName} = obj
+                firstName // 컴바인
+                lastName // 웹
+
+            - let, const 키워드
+                1. block scope를 가지고 재선언 불가, 재할당 가능한 let 변수 선언 키워드와 상수 선언 키워드 const가 추가되었음
+                2. 기존에 var 키워드만 있었을 때 보다 예측 가능한 코드를 작성할 수 있게 되었다.
+
+            - Class
+                1. Javascript는 프로토타입 기반의 객체 지향 언어이다.
+                2. 클래스 기반의 객체 지향 프로그할 수 있도록 Class 키워드를 도입했다.
+                3. Javascript에서 클래스는 내부적으로 프로토타입을 이용해서 만들어졌다.
+                4. 클래스는 사실 특별한 함수라고 생각해도 좋다.
+                5. 클래스는 호이스팅이 let, const 키워드와 같이 동작한다.
+                
+            - Module 
+                1. 모듈이란 재사용하기 위한 코드의 조각을 뜻한다.
+                2. 세부사항은 캡슐화시키고, API 부분만 외부에 노출시킨 코드이다.
+                3. type에 module를 추가시키고 확장자를 mjs로 변경하여 사용
+                4. 모듈은 모듈 스코프를 가지며, import와 export 키워드를 이용해서 사용한다.    
     </textarea>
     <script>
         let name = 'JiHun';
@@ -90,6 +128,56 @@
 
         //let {name, num} = bts
         //console.log(name, num);
+        
+         //let array = [1, 2, 3]
+        //let a = array[0]
+        //let b = array[1]
+        //let c = array[2]
+        //let [a, b, c] = array
+        //console.log(a, b, c);    
+        /* let [a, ...rest] = array
+        console.log(a);
+
+        let person = {
+            name: 'JiHun',
+            age: 20,
+            cute: true
+        };
+        let {name, ...rest1} = person
+        console.log(name, rest1); */
+
+        /* let a = [1, 2]
+        let b = [3, 4]
+        let c = [5, 6]
+        let result = a.concat(b, c)
+        console.log(result);
+
+        let res = [...a, ...b, ...c]
+        console.log(res);
+
+
+        foo();
+        function foo() {
+            console.log('foooooooooooooooooooo');
+        }
+
+        let foo1 = () => {
+            console.log('foooooo1');
+        }
+        foo1(); //화살표 함수는 호이스팅이 적용되지 않는다
+
+        const foo2 = () => '안녕하십니까'; //반환이 있는 형태
+        console.log(foo2()); */
+
+        let age = 30
+        let person = {
+            name: 'asdf',
+            age: 20,
+            getInfo: function() {
+                console.log(this);
+            }
+        }
+        person.getInfo(); //lexical scope
     </script>
 </body>
 </html>

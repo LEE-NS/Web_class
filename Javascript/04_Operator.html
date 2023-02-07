@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자; Operator</title>
+</head>
+<body>
+    <h1>연산자(Operator)</h1>
+    <textarea cols="150" rows="50">
+        연산자 : + - × ÷
+            - 여러가지 값들을 가지고 연산할 수 있는 다양한 연산자들이 존재한다.
+
+        &lt; 기본 연산자 &gt;
+        
+        순서    연산자          사용 예시          설명
+        1.      -               C = -A            A값이 양수이면 음수로, 음수이면 양수로 변환                  
+        2.      -               C = A - B         A에서 B를 뺀 값을 C에 저장. 뺄셈 연산       
+        3.      +               C = A + B         A와 B의 합을 C에 저장. 덧셈 연산       
+        4.      *               C = A * B         A와 B의 곱을 C에 저장. 곱셈 연산       
+        5.      /               C = A / B         A를 B로 나눈 몫을 C에 저장. 나눗셈 연산       
+        6.      %               C = A % B         A를 B로 나눈 나머지를 C에 저장. 나머지 연산(모듈러 연산)       
+        7.      ++              C = A++           A값에 1을 더한 값을 C에 저장. 증가 연산(후위 증가)     
+        8.      --              C = A--           A값에 1을 뺀 값을 C에 저장. 감소 연산(후위 감소)  
+        <!-- 전 후위 차이 : 증가 시켜 저장, 저장한 후 증가 -->  
+        9.      **              C = A ** B        A의 B 거듭제곱 값을 C에 저장. 거듭제곱 연산    
+        
+        &lt; 관계 연산자 &gt;
+        
+        순서    연산자          사용 예시          설명
+        1.      ==              A == B            A와 B의 값이 같은지 비교(동등)                  
+        2.      ===             A === B           A와 B의 값 뿐만 아니라 자료형도 같은지 비교(일치) <!-- 이 연산자의 사용이 더 권장됨 -->       
+        3.      !=              A != B            A와 B의 값이 다른지 비교       
+        3-1.    !==             A !== B           A와 B의 값과 자료형까지 다른지 비교(불일치)       
+        4.      >               A > B             A가 B보다 큰지 비교       
+        5.      >=              A >= B            A가 B보다 크거나 같은지 비교       
+        6.      <               A < B             A가 B보다 작은지 비교       
+        7.      <=              A <= B            A가 B보다 작거나 같은지 비교   
+        
+        &lt; 논리 연산자 &gt;
+        
+        순서    연산자          사용 예시          설명
+        1.      &&              A && B            AND 연산. A와 B 둘 다 TRUE 일때 TRUE를 반환                  
+        2.      ||              A || B            OR 연산. A와 B 둘 다 FALSE 일때 FALSE를 반환
+        3.      !               !A                NOT 연산. A가 TRUE면 FALSE, FALSE면 TRUE를 반환
+        
+        &lt; 복합대입 연산자 &gt;
+        
+        순서    연산자          사용 예시          설명
+        1.      +=              A += B            A = A + B 와 같다                  
+        2.      -=              A -= B            A = A - B 와 같다       
+        3.      *=              A *= B            A = A * B 와 같다      
+        4.      /=              A /= B            A = A / B 와 같다       
+    </textarea>
+</body>
+</html>

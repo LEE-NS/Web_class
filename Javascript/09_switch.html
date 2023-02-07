@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치; switch</title>
+</head>
+<body>
+    <h1>스위치(switch)</h1>
+    <textarea cols="150" rows="60">
+
+        if문 이외에 조건을 표현하는 방식이 있는데 switch가 그것이다.
+
+        switch문
+            - 간결하고 명확한 의미를 가짐. if 문에 비해
+            - case가 값으로 명확히 정해진 경우에만 사용이 가능.
+            - 조건이 비교식일 경우 사용 불가능하다.
+
+        if문과 switch문의 비교
+            let menu = 1
+
+            if(menu == 1) {
+                console.log('물건 사기')
+            } else if(menu == 2) {
+                console.log('잔고 확인')
+            } else if(menu == 3) {
+                console.log('기록 확인') 
+            } else {
+                console.log('홈으로 돌아가기')
+            }
+            - 위와 같은 키오스크의 메뉴 리스트 프로그램을 만든다고 가정하고 if문을 switch문으로 바꿔보면 아래와 같다.
+
+            let menu = 1
+
+            switch(menu) {
+                case 1 :
+                    console.log('물건 사기')
+                    break
+                case 2 :
+                    console.log('잔고 확인')
+                    break
+                case 3 :
+                    console.log('기록 확인')    
+                    break
+                default :
+                    console.log('홈으로 돌아가기')    
+            }
+            - 이처럼 if문으로 대체해서 사용할 수 있는 것이 switch문이다.
+            - default는 else처럼 매칭되는 case가 없을 때 실행됨
+            - break는 switch문을 빠져나가는 목적
+            - switch문은 견출지와 같은 느낌
+            - case에 들어가는 값이 완전히 하나로 떨어질 경우에만 사용 가능
+
+        switch문은 꼭 사용해야 하는가
+            - 그렇진 않다.
+            - if문으로도 충분히 구현 가능함.    
+    </textarea>
+</body>
+</html>

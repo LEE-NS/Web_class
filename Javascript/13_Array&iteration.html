@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열과 반복문</title>
+</head>
+<body>
+    <h1>배열과 반복문</h1>
+    <textarea cols="150" rows="60">
+
+        배열
+            - 여러 자료들을 나란하게 메모리 공간에 할당하는 것
+            let arr = [1, 2, 3, 4, 5]  //  배열 arr의 선언 및 초기화
+            arr[0] = 10                //  배열 arr의 인덱스 값 0번째의 값을 10으로 바꾼다
+            arr.length                 //  배열 arr의 길이값 5를 반환
+
+        반복문
+            - 특정 코드를 조건이 충족이 되면 반복하는 문법.
+            let sum = 0
+            for(let i = 1; i < 11; i++) {
+                sum += 1
+            }    
+
+        배열과 반복문의 관계
+            - 매우 자주 빈번하게 사용되는 조합
+            - 배열의 값에 순차적인 접근을 할 수 있기 때문에 배열과 반복문은 빈번히 같이 사용된다
+            - 배열이 사용되어지면 높은 확률로 반복문이 같이 등장하는 경우가 많다.
+            
+        배열과 반복문 예시
+            let ar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            - 위와 같이 선언된 배열 ar에 속해있는 모든 값들을 두 배 씩 증가시키고 싶을 때는 아래와 같이 코드가 작성된다.
+            ar[0] = ar[0] * 2     
+            ar[1] = ar[1] * 2     
+            ar[2] = ar[2] * 2     
+            ar[3] = ar[3] * 2     
+            ar[4] = ar[4] * 2     
+            ar[5] = ar[5] * 2     
+            ar[6] = ar[6] * 2     
+            ar[7] = ar[7] * 2     
+            ar[8] = ar[8] * 2     
+            ar[9] = ar[9] * 2     
+            - 의미 없는 반복이 이루어지고 있기에 반복문을 사용하면
+            for(let i = 0; i < ar.length; i++) {
+                ar[i] = ar[i] * 2
+            }
+            - 이처럼 반복문을 사용하면 배열의 각 요소에 순차적으로 접근을 하는 것이 가능해짐
+            - 배열과 반복문이 빈번히 함께 사용되는 이유는 이것과 같다.
+    </textarea>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.log(arr);
+        for(let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] * 2
+        }
+        console.log(arr);
+
+        let fruit = ['banana', 'apple', 'mango', 'grape', 'orange', 'mandarine', 'pear', 'kiwi', 'strawberry', 'cherry', 'blueberry', 'cranberry']
+        for(let i = 0; i < fruit.length; i++) {
+            console.log(fruit[i]);
+        }
+    </script>
+</body>
+</html>

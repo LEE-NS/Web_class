@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data type 2</title>
+</head>
+<body>
+    <h1>자료형 2</h1>
+    <textarea cols="150" rows="20">
+        
+        typeof 연산자
+            - 자료의 유형(자료형, 데이터 타입)을 알려주는 연산자
+            - 문자형 : String
+              숫자형 : Number
+              불린 : Boolean
+              함수 : Function
+            - typeof 연산자가 기본 사칙연산보다 우선순위가 높다.
+
+            let a = 10
+            console.log(typeof a)
+            - 결과값 : number 
+    </textarea>
+    <script>
+
+        let num = 100;
+        let arr = [1,2,3,4,5];
+        let obj = {name : 'jimin', age : 20};
+        let str = 'jimin';
+        let boo = true;
+        function func() {
+            5 + 5;
+        }
+        console.log(typeof num);
+        console.log(typeof arr);
+        console.log(typeof obj);
+        console.log(typeof str);
+        console.log(typeof boo);
+        console.log(typeof func);
+        console.log(typeof 'a');
+        console.log(typeof '7');
+        console.log(typeof [1,2,3]);
+        console.log(typeof {1:2, 3:4});
+        console.log(typeof false);
+        console.log(typeof function func(){5 + 5;});
+        console.log(typeof 7 + 2);
+        console.log(typeof '7'+'2');
+        console.log(typeof '7'+ 3);
+        console.log(typeof 4 - 3); //NaN : not a number
+        console.log(typeof 4 < 3); 
+    </script>
+    <br><br><br>
+    <h1>형변환(type conversion)</h1>
+    <textarea cols="150" rows="40">
+        
+        형변환 : 자료의 type을 변환하는 것.
+            - String() 함수 : 문자형으로 변환
+            - Number() 함수 : 숫자형으로 변환
+            - Boolean() 함수 : 불린형으로 변환
+
+        자동 형변환
+            1. 산술 연산자    
+                - 더하기를 제외하고 자동으로 type이 변환된다.
+                - 더하기는 문자열을 더하기가 우선순위가 더 커서 제외됨
+                - 숫자 + 문자 = 문자로 인식
+
+                4 + '2'           42
+                4 + 2             6
+                4 - true          3
+                4 * falese        0
+                4 / '2'           2
+                '4' ** true       4
+                4 % 'two'         NaN
+
+            2. 관계 비교 연산자
+                2 < '3'         true
+                2 > true        true
+                '2' <= false    false
+                'two' >= 1      false(비교 불가능은 false)    
+
+            3. 동등 비교 연산자
+                - 동등과 부등은 자료의 유형을 변환시켜서 비교한다.
+                - 일치와 불일치는 자료의 유형을 변환시키지 않고 비교한다.    
+
+                1 === '1'               false
+                1 === true              false
+                1 == '1'                true
+                1 == true               true        
+    </textarea>
+    <script>
+        console.log('10' + '5');
+        console.log(Number('10') + Number('5'));
+        console.log(String(10) + String(5));
+        
+        let a = 'SBS아카데미';
+        console.log(a);
+        console.log(Number(a));
+        console.log(typeof Number(a));
+
+        let b = true;
+        console.log(b);
+        console.log(Number(b));
+        console.log(typeof Number(b));
+
+        let c = '';
+        console.log(c);
+        console.log(Boolean(c));
+        console.log(Boolean('aaa'));
+
+    </script>
+</body>
+</html>

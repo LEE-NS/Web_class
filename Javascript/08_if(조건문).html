@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문(if)</title>
+</head>
+<body>
+    <h1>조건문; if</h1>
+    <textarea cols="150" rows="100">
+
+        논리적 사고의 시작, 조건문.
+
+        if문의 사용
+            if (조건) {
+                조건이 TRUE 라면 실행될 코드
+            }
+            - 이 때 조건이 TRUE가 되면 중괄호 안으로 들어와서 코드를 실행한다.
+                if (true) {
+                    console.log('조건이 TRUE 입니다.')
+                }
+                콘솔창에는 '조건이 TRUE 입니다.' 라는 문구가 출력된다. 조건에 그냥 true를 넣어두었기 때문이다.
+
+        if ~ else 문의 사용
+            if (조건) {
+                조건이 TRUE라면 실행될 코드
+            } else {
+                조건이 FALSE라면 실행될 코드
+            }        
+            - 이 때 조건이 FALSE 가 되면 else 뒤의 중괄호 안으로 들어와서 코드를 실행한다.
+                if (false) {
+                    console.log('조건은 TRUE이다.')
+                } else {
+                    console.log('조건은 FALSE이다.')
+                }
+                콘솔창에는 '조건은 FALSE이다.' 라는 문구가 출력된다. 조건에 그냥 false를 넣어두었기 때문.
+
+        if ~ else if ~ else 문의 사용
+            if (조건1) {
+                조건1이 TRUE라면 실행될 코드
+            } else if (조건2) {
+                조건2가 TRUE라면 실행될 코드
+            } else if (조건3) {
+                조건3가 TRUE라면 실행될 코드
+            } else {
+                모든 조건이 FALSE 라면 실행될 코드
+            }     
+            - 위에서부터 차례대로 true인 조건이 있는지를 찾고, 해당되는 조건이 있는 중괄호 안으로 들어와서 코드를 실행하고, 모든 조건이 false 라면 else  뒤의 중괄호 안으로 들어와서 코드를 실행한다.
+            - 개수의 제한은 없다. 원하는 만큼 조건을 추가할 수 있음.
+                if (false) {
+                    console.log('조건1은 TRUE이다.')
+                } else if (false) {
+                    console.log('조건2는 TRUE이다.')
+                } else if (true) {
+                    console.log('조건3은 TRUE이다.')
+                } else {
+                    console.log('모든 조건은 FALSE 이다.')
+                }   
+                콘솔창에는 '조건3은 TRUE이다.' 가 출력된다. 조건3의 else if에만 true를 넣어두었기 때문.
+
+            if문의 중첩사용
+                if (조건1) {
+                    if (조건2) {
+                        console.log('조건1과 조건2가 TRUE이다.')
+                    } else {
+                        console.log('조건1만 TRUE이다.')
+                    }
+                } else {
+                    console.log('모든 조건이 FALSE이다.')
+                }
+                - 원하는 만큼 조건을 추가할 수 있다.
+
+            if ~ else 문 처럼 사용 가능한 삼항(조건)연산자
+                let a = 10;
+                if(a > 5) {
+                    console.log('a는 5보다 큽니다.')
+                } else {
+                    console.log('a는 5보다 작습니다.')
+                }    
+                - 위의 if ~ else 문과 같은 의미로 사용되어지는 삼항연산자는 아래와 같다.
+                    a > 5 ? console.log('a는 5보다 큽니다.') : console.log('a는 5보다 작습니다.')
+
+                - 삼항연산자의 양식
+                    조건 ? 조건이 TRUE일때 실행될 내용 : 조건이 FALSE일 때 실행될 내용    
+                - 삼항 조건 연산자도 중첩 사용 가능함
+                    조건1 ? true : 조건2 ? true : 조건3 ? true : false
+    </textarea>
+    <script>
+        let age = 18;
+
+        //if 예제
+        if(age > 19) {
+            console.log('운전면허 취득이 가능합니다.');
+        }
+
+        //if ~ else 예제
+        if(age > 19) {
+            console.log('운전면허 취득이 가능합니다.');
+        } else {
+            console.log('운전면허 취득이 불가능합니다.');
+        }
+
+        // if ~ else if ~ else 예제
+        if(age >= 18) {
+            console.log('원동기 면허만 취득 가능합니다.');
+        } else if(age > 20) {
+            console.log('운전면허 취득이 가능합니다.');
+        } else {
+            console.log('운전면허 취득이 불가능합니다.');
+        }
+
+        //if 중첩 예제
+        age = 21;
+        let license = false;
+        if(age > 20) {
+            if(license == true) {
+                console.log('운전이 가능합니다.');
+            } else {
+                console.log('면허부터 취득합시다.');
+            }
+        } else {
+            console.log('운전면허 취득이 불가능합니다.');
+        }
+    </script>
+</body>
+</html>

@@ -47,7 +47,7 @@
                 };
                 obj.inside();   //출력값 : 객체 안에 바로 함수를 선언한다.
                 obj.myFn();   //출력값 : myFn
-                console.log(obj.TEXT1);   //출력값 : 웹컴바인
+                console.log(obj.text1);   //출력값 : 웹컴바인
                 
             - 화살표 함수(Arrow function)
                 1. 함수 표현식을 화살표 함수로 표현할 수 있다.
@@ -67,8 +67,8 @@
                 };
                 //함수 표현식 : 화살표 함수(생략형)
                 const plusFn = (a,b) => a + b;
-        
-                - 구조 분해 할당
+
+            - 구조 분해 할당
                 1. 펼친다는 뜻으로 객체와 배열에서 사용되어진다.
                 2. 값을 해체한 후 개별 변수에 할당하는 과정을 말한다.
                 
@@ -105,15 +105,82 @@
                 2. 세부사항은 캡슐화시키고, API 부분만 외부에 노출시킨 코드이다.
                 3. type에 module를 추가시키고 확장자를 mjs로 변경하여 사용
                 4. 모듈은 모듈 스코프를 가지며, import와 export 키워드를 이용해서 사용한다.    
+
+            - Promise
+                1. Javascript에서 비동기 처리를 기존에는 콜백함수를 사용한 콜백 패턴을 사용했었다.
+                    콜백 함수란, 파라미터로 함수를 전달하는 함수
+                    파라미터로 함수를 전달 받아서 함수의 내부에서 실행하는 함수
+                        function add(a, b) {
+                            return a + b;
+                        };
+
+                        function sayResult(value) {
+                            console.log(value);
+                        };
+
+                        sayResult(add(3, 4));
+                        
+                        위의 코드를 콜백함수를 사용한 코드를 바꾸면
+
+                        function add(a, b, callback) {
+                            callback(a + b)
+                        };
+
+                        function sayResult(value) {
+                            console.log(value)
+                        };
+
+                        add(3, 4, sayResult)
+                    
+                    콜백 패턴이란, 파라미터가 인자로 전달되는 함수 뒤에 ()를 붙이지 않고 전달해서 실행되는 타이밍을 콜백함수 내부로 옮기는 것. 그러한 패턴을 의미한다.
+
+                2. 결과적으로 callback hell을 발생시킨다.
+                        - 코드가 중첩되어 복잡함을 야기한다
+                            step1(function(value1) {
+                                step2(function(value2) {
+                                    step3(function(value3) {
+                                        step4(function(value4) {
+                                            step5(function(value5) {
+                                                // value6가 파라미터인 또 다른 어떤 함수들..
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+
+                3. 이를 해결하기 위해서 promise가 도입되었다
+                4. Promise 후속처리 메소드를 이용해서 에러 처리를 효과적으로 할 수 있게 되었다
+                5. Promise는 Javascript 비동에 사용되는 객체이다.
+                    - 비동기 처리란, 특정 코드의 실행이 완료될 때 까지 기다리지 않고 다음 코드를 먼저 실행하는 것.
+                6. Promise의 세 가지 상태
+                    - Pending(대기)     :   비동기 처리 로직이 아직 완료되지 않은 상태           
+                    - Fulfilled(이행)   :   비동기 처리가 완료되어 Promise가 결과 값을 반환해준 상태     
+                    - Rejected(실패)    :   비동기 처리가 실패하거나 오류가 발생한 상태     
+                
+                7. 동기/비동기 예시 코드
+                    function printWithDelay(callback, sec) {
+                        setTimeout(callback, sec + 1000)
+                    }        
+
+                    printWithDelay(() => console.log('async callback'), 5)
+                    console.log('hello everybody!')
+
+                    function printImmediately(callBackFunction) {
+                        callBackFunction()
+                    };
+
+                    printImmediately(() => console.log('synchronous callback'))
+                    console.log('foo bar asdf!')
+
     </textarea>
     <script>
-        let name = 'JiHun';
-        let age = 20;
+        //let name = 'JiHun';
+        //let age = 20;
 
-        let person {
-            '이름': name,
-            '나이': age
-        };
+        //let person {
+        //    '이름': name,
+        //    '나이': age
+        //};
         //let person1 = {name, age}
         //console.log(person)
         //console.log(person1)
@@ -128,8 +195,8 @@
 
         //let {name, num} = bts
         //console.log(name, num);
-        
-         //let array = [1, 2, 3]
+
+        //let array = [1, 2, 3]
         //let a = array[0]
         //let b = array[1]
         //let c = array[2]
@@ -169,7 +236,7 @@
         const foo2 = () => '안녕하십니까'; //반환이 있는 형태
         console.log(foo2()); */
 
-        let age = 30
+        /* let age = 30
         let person = {
             name: 'asdf',
             age: 20,
@@ -177,7 +244,21 @@
                 console.log(this);
             }
         }
-        person.getInfo(); //lexical scope
+        person.getInfo(); //lexical scope */
+
+        function printWithDelay(callback, sec) {
+            setTimeout(callback, sec * 1000)
+        }        
+
+        printWithDelay(() => console.log('async callback'), 5)
+        console.log('hello everybody!')
+
+        function printImmediately(callBackFunction) {
+            callBackFunction()
+        };
+
+        printImmediately(() => console.log('synchronous callback'))
+        console.log('foo bar asdf!')
     </script>
 </body>
 </html>

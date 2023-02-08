@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 최신문법 2</title>
+</head>
+<body>
+    <h1>ES6 최신문법 2</h1>
+    <textarea cols="150" rows="100">
+
+        for 루프 : 반복을 위한 문법. 배열과 자주 같이 사용되어진다. 이에 관련된 새로운 문법
+
+        let names = [
+            "Steven Paul",
+            "Bill Gates",
+            "Mark Elliot Zuckerberg",
+            "Elon Musk",
+            "Jeff Bezos",
+            "Warren Edward Buffett",
+            "Larry Page",
+            "Larry Ellison",
+            "Tim Cook",
+            "Lloyd Blankfein"
+        ]
+
+        for(let i = 0; i < names.length; i++) {
+            console.log(names[i])
+        };
+
+        1. forEach(함수)
+            - 함수를 매개변수로 받는 함수
+            
+            names.forEach(printName);
+            function printName(item) {
+                console.log(item)
+            };
+
+            names.forEach((item) => {console.log(item))
+            names.forEach((item, index) => {console.log(item, index))
+            names.forEach((item, index, array) => {console.log(item, index, array))
+            
+            위와 같이 첫번째 인자는 배열의 각 요소, 두 번째 인자는 배열의 순서값, 세 번째 인자는 배열 자체를 매개변수로 받음    
+
+        2. map(함수)
+            let data = names.map((item) => {
+                return item
+            })
+            - 첫 번째 인자는 요소의 값, 두 번째 인자는 순서값, 세 번째 인자는 순회하는 대상   
+            
+            let ceoList = [
+                {name: "Steven Paul", age: 23, ceo: true},
+                {name: "Bill Gates", age: 45, ceo: true},
+                {name: "Mark Elliot Zuckerberg", age: 67, ceo: false}
+            ]   
+
+            let dataList = ceoList.map((item) => {
+                return item.name
+            })
+            console.log(dataList);
+
+        3. filter()
+            let dataList2 = ceoList.filter((item) => {
+                return item.age == 23
+            })
+            console.log(dataList2);
+
+        4. some()
+            let data3 = names.some((item) => {
+                return item.startsWith("L")
+            })    
+            bool type 값을 반환한다
+
+        5. every()
+            let data4 = names.every((item) => {
+                return item.length < 0
+            })    
+            console.log(data4)
+
+        6. find()
+            let data5 = names.find((item) => {
+                return item.startsWith("L")
+            })    
+            배열이 아닌 string으로 반환
+            정확한 하나의 값을 찾기에 적합
+
+        7. findIndex()
+            let data6 = names.findIndex((item) => {
+                return item.startsWith("L")
+            })    
+
+        - forEach       :   반환값이 없고 단순 for문과 같이 동작함    
+        - map           :   반환값을 배열에 담아 반환 
+        - filter        :   조건을 충족하는 요소만 배열에 담아 반환     
+        - some          :   조건을 충족하는 요소가 하나라도 있으면 그에 맞춰 bool type으로 값을 반환
+        - every         :   모든 배열의 요소가 조건을 충족하는지 여부에 따라 bool type으로 값을 반환 
+        - find          :   조건을 충족하는 요소 하나만 반환(여러개라면 첫 번째 것만 반환) 
+        - findIndex     :   조건을 충족하는 요소의 순서값을 반환(여러개라면 첫 번째 것만 반환) 
+    </textarea>
+    <script>
+        let names = [
+            "Steven Paul",
+            "Bill Gates",
+            "Mark Elliot Zuckerberg",
+            "Elon Musk",
+            "Jeff Bezos",
+            "Warren Edward Buffett",
+            "Larry Page",
+            "Larry Ellison",
+            "Tim Cook",
+            "Lloyd Blankfein"
+        ]
+
+        /* let data = names.map((item) => {
+                return item
+            })
+
+        let ceoList = [
+            {name: "Steven Paul", age: 23, ceo: true},
+            {name: "Bill Gates", age: 45, ceo: true},
+            {name: "Mark Elliot Zuckerberg", age: 67, ceo: false}
+        ]   
+
+        let dataList = ceoList.map((item) => {
+            return item.name
+        })
+        console.log(dataList);
+
+        let dataList2 = ceoList.filter((item) => {
+                return item.age == 23
+            })
+        console.log(dataList2); */
+
+        /* let data2 = names.filter((item) => {
+            return item.startsWith("L")
+        })
+        console.log(data2)
+
+        let data4 = names.every((item) => {
+                return item.length < 0
+        })    
+        console.log(data4) */
+
+        let data6 = names.findIndex((item) => {
+                return item.startsWith("L")
+            }) 
+        console.log(data6)    
+    </script>
+</body>
+</html>

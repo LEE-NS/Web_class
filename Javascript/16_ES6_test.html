@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 ES6 test</title>
+</head>
+<body>
+    <h1>ES6 TEST</h1>
+    <script>
+        let names = [
+            "Steven Paul Jobs",
+            "Bill Gates",
+            "Mark Elliot Zuckerberg",
+            "Elon Musk",
+            "Jeff Bezos",
+            "Warren Edward Buffett",
+            "Larry Page",
+            "Larry Ellison",
+            "Tim Cook",
+            "Lloyd Blankfein",
+        ];
+        
+        // map()
+        // 모든 이름을 대문자로 바꾸어 출력
+        let capitalNames = names.map((item) => {
+            return item.toUpperCase()
+        })
+        console.log(capitalNames);
+
+        //성을 제외한 이름만 출력
+        let firstNames = names.map((item1) => {
+            return item1.split(" ")[0]
+        })
+        console.log(firstNames);
+
+        //이름의 이니셜만 출력
+        let initialNames = names.map((item2) => {
+            let splitedName = item2.split(" ");
+            let initials = "";
+            splitedName.forEach((sumInitials) => {
+                initials+=sumInitials[0]
+            });
+            return initials;
+        })
+        console.log(initialNames);
+
+
+        //filter()
+        //이름에 a를 포함한 사람들을 출력
+        let withA = names.filter((person1) => {
+            return person1.includes('a')
+        })
+        console.log(withA);
+
+        //이름에 같은 글자가 연속해서 들어간 사람들을 출력(aa, bb 와 같이)
+        let doubleLetter = names.filter((person2) => {
+            let splitedName = person2.split("")
+            return splitedName.some((lett, index) => lett == splitedName[index + 1])
+        })
+        console.log(doubleLetter)
+
+        //some()
+        //전체 이름의 길이가 20자 이상인 사람이 있는가?
+        let twentyWords = names.some((person3) => {
+            return person3.length >= 20
+        })
+        console.log(twentyWords);
+        //성을 제외한 이름에 p를 포함한 사람이 있는가(대소문자 무관)
+        console.log(names.some((item) => {
+            let splitName = item.split(" ")
+            splitName.pop()
+            return splitName.some(eachName => eachName.toLocaleLowerCase().includes('a'))
+        }));
+
+        //every()
+        //모두의 전체 이름의 길이가 20자 이상인가?
+        console.log(names.every((item) => {
+            return item.length >= 20
+        }));
+        //모두의 이름에 a가 포함되어 있는가?
+        console.log(names.every((item) => {
+            return item.includes('a')
+        }));
+
+        //find()
+        //전체 이름의 길이가 20자 이상인 사람을 찾으시오
+        console.log(names.find((item) => {
+            return item.length >= 20
+        }));
+        //미들 네임이 포함되어있는 사람을 찾으시오
+        console.log(names.find((item) => item.split(' ').length >= 3));
+
+        //findIndex()
+        //전체 이름의 길이가 20자 이상인 사람의 순서값을 찾으시오
+        console.log(names.findIndex((item) => item.length >= 20));
+        //미들네임이 포함되어 있는 사람의 순서값을 찾으시오
+        console.log(names.findIndex((item) => item.split(" ").length >= 3));
+    </script>
+</body>
+</html>

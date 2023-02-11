@@ -159,7 +159,7 @@
                 
                 7. 동기/비동기 예시 코드
                     function printWithDelay(callback, sec) {
-                        setTimeout(callback, sec + 1000)
+                        setTimeout(callback, sec * 1000)
                     }        
 
                     printWithDelay(() => console.log('async callback'), 5)

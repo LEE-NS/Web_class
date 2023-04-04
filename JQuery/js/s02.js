@@ -1,4 +1,4 @@
-$('.box1 span').text('흐림으로 바뀜랄라라라라라');
+$('.box1 span').text('흐림으로 바뀜');
 
 let day = '가나다일'
 $('.box2 span').text(day)

@@ -5,5 +5,5 @@ const layout = new Swiper('.cont_list', {
         el: '.cont_pager',
         clickable: true
     },
-    mousewheel: {} //마우스 휠 속성
+    mousewheel: {} // 마우스 휠 속성
 })
